@@ -41,26 +41,26 @@ export default function ComplimentModal({ mood, isOpen, onClose }: ComplimentMod
                       ${isChanging ? 'opacity-0' : 'opacity-100'}`}>
             {currentCompliment}
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <button
-              onClick={getNewCompliment}
-              className="w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 
-                       bg-gradient-to-r from-pink-500 to-purple-500 text-white 
-                       rounded-full hover:from-pink-600 hover:to-purple-600 
-                       transition-all duration-300 transform hover:scale-105 
-                       active:scale-95 shadow-lg text-sm sm:text-base"
-            >
-              Get Another Compliment
-            </button>
+          <div className="flex flex-col-reverse sm:flex-row gap-2 sm:gap-3 justify-center w-full sm:w-auto">
             <button
               onClick={onClose}
-              className="w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 
-                       border border-gray-300 dark:border-gray-600 rounded-full
-                       hover:bg-gray-100 dark:hover:bg-gray-700 transition-all 
-                       duration-300 transform hover:scale-105 active:scale-95
-                       text-sm sm:text-base"
+              className="px-6 py-2 rounded-full text-sm font-medium
+                       border border-gray-300 dark:border-gray-600
+                       hover:bg-gray-100 dark:hover:bg-gray-700/50 
+                       transition-all duration-300 text-gray-700 dark:text-gray-200
+                       min-w-[120px] text-center"
             >
               Close
+            </button>
+            <button
+              onClick={getNewCompliment}
+              className="px-6 py-2 rounded-full text-sm font-medium
+                       bg-gradient-to-r from-pink-500 to-purple-500 text-white
+                       hover:from-pink-600 hover:to-purple-600 
+                       transition-all duration-300 shadow-md hover:shadow-lg
+                       min-w-[120px] text-center"
+            >
+              Get Another ✨
             </button>
           </div>
         </div>
